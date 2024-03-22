@@ -11,6 +11,6 @@ const dsn =
   SENTRY_DSN ||
   "https://8529828a4a8e4e0aa939318cc8955b30@o881088.ingest.sentry.io/5835358";
 
-Sentry.init({
-  dsn,
-});
+// Sentry.init({
+//   dsn,
+// });

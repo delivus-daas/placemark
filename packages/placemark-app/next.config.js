@@ -4,9 +4,9 @@ const { withBlitz } = require("@blitzjs/next");
 
 // const { withSentryConfig } = require("@sentry/nextjs");
 
-const SentryWebpackPluginOptions = {
-  silent: true,
-};
+// const SentryWebpackPluginOptions = {
+//   silent: true,
+// };
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -68,8 +68,8 @@ let config = {
   },
 };
 
-if (isProduction) {
-  config = withSentryConfig(config, SentryWebpackPluginOptions);
-}
+// if (isProduction) {
+//   config = withSentryConfig(config, SentryWebpackPluginOptions);
+// }
 
 module.exports = withBlitz(config);
