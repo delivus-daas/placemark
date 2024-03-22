@@ -2,7 +2,7 @@ const { withBlitz } = require("@blitzjs/next");
 /* eslint-env node */
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const { withSentryConfig } = require("@sentry/nextjs");
+// const { withSentryConfig } = require("@sentry/nextjs");
 
 const SentryWebpackPluginOptions = {
   silent: true,
