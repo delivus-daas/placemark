@@ -2,11 +2,11 @@ const { withBlitz } = require("@blitzjs/next");
 /* eslint-env node */
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const { withSentryConfig } = require("@sentry/nextjs");
+// const { withSentryConfig } = require("@sentry/nextjs");
 
-const SentryWebpackPluginOptions = {
-  silent: true,
-};
+// const SentryWebpackPluginOptions = {
+//   silent: true,
+// };
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -68,8 +68,8 @@ let config = {
   },
 };
 
-if (isProduction) {
-  config = withSentryConfig(config, SentryWebpackPluginOptions);
-}
+// if (isProduction) {
+//   config = withSentryConfig(config, SentryWebpackPluginOptions);
+// }
 
 module.exports = withBlitz(config);

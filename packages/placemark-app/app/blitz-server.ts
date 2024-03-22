@@ -11,7 +11,7 @@ import { BlitzLogger, BlitzServerMiddleware } from "blitz";
 import db from "db";
 import { authConfig } from "./blitz-client";
 import { logger } from "integrations/log";
-import * as Sentry from "@sentry/nextjs";
+// import * as Sentry from "@sentry/nextjs";
 import { ZodError } from "zod";
 import { Prisma } from "@prisma/client";
 
@@ -33,7 +33,7 @@ export const { gSSP, gSP, api } = setupBlitzServer({
       try {
         return await next();
       } catch (e) {
-        Sentry.captureException(e);
+        // Sentry.captureException(e);
         if (e instanceof ZodError) {
           res.statusCode = 400;
           // https://github.com/blitz-js/blitz/issues/4295
@@ -57,7 +57,7 @@ export const { gSSP, gSP, api } = setupBlitzServer({
     }),
   ],
   onError: (e) => {
-    Sentry.captureException(e);
+    // Sentry.captureException(e);
   },
   logger:
     process.env.NODE_ENV === "development"
